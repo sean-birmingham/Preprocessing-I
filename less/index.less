@@ -137,4 +137,29 @@ table {
 html,
 body {
   height: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+// Variables
+@container-border: 5px solid red;
+@item-border: 5px solid blue;
+
+.nav-container {
+  // border: @container-border;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  .nav {
+    a {
+      color: black;
+      margin-right: 10px;
+      padding: 5px;
+      text-decoration: none;
+      &:hover {
+        color: red;
+      }
+    }
+  }
 }
