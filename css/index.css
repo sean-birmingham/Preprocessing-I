@@ -136,6 +136,13 @@ body {
   margin: 0 auto;
   font-family: sans-serif;
 }
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
 .nav-container {
   margin-top: 20px;
   padding: 10px;
@@ -150,4 +157,33 @@ body {
 }
 .nav-container .nav a:hover {
   color: red;
+}
+.main-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.main-container .main {
+  width: 50%;
+  padding: 20px;
+  background: lightgrey;
+}
+.main-container .main img {
+  width: 30%;
+}
+.main-container .main h1 {
+  font-size: 40px;
+}
+.main-container .main .main-btn {
+  border: none;
+  border-radius: 5%;
+  background: darkgray;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.main-container .main .main-btn:hover {
+  background: lightgreen;
 }
