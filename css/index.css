@@ -144,13 +144,13 @@ body {
   justify-content: center;
 }
 .nav-container {
-  margin-top: 20px;
-  padding: 10px;
+  background: gray;
+  padding: 20px;
   display: flex;
   justify-content: center;
 }
 .nav-container .nav a {
-  color: black;
+  color: white;
   margin-right: 10px;
   padding: 5px;
   text-decoration: none;
@@ -159,31 +159,120 @@ body {
   color: red;
 }
 .main-container {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
 .main-container .main {
-  width: 50%;
+  border-radius: 5px;
+  width: 90%;
   padding: 20px;
   background: lightgrey;
 }
 .main-container .main img {
-  width: 30%;
+  width: 20%;
 }
 .main-container .main h1 {
   font-size: 40px;
 }
 .main-container .main .main-btn {
   border: none;
-  border-radius: 5%;
+  border-radius: 5px;
   background: darkgray;
   color: white;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 30px;
   padding: 10px;
   cursor: pointer;
 }
 .main-container .main .main-btn:hover {
-  background: lightgreen;
+  background: #4caf50;
+}
+.skills-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.skills-container .skills {
+  width: 90%;
+  display: flex;
+}
+.skills-container .skills .skills-item-left {
+  width: 40%;
+}
+.skills-container .skills .skills-item-left h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.skills-container .skills .skills-item-right {
+  width: 50%;
+}
+.skills-container .skills .skills-item-right h2 {
+  font-size: 30px;
+}
+.work-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.work-container .work {
+  width: 90%;
+}
+.work-container .work h3 {
+  font-size: 20px;
+}
+.work-container .work table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+.work-container .work table th,
+.work-container .work table td {
+  text-align: left;
+  padding: 16px;
+}
+.work-container .work table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+#contact-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#contact-container .contact {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+}
+#contact-container .contact input[type='text'],
+#contact-container .contact select,
+#contact-container .contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+#contact-container .contact input[type='submit'] {
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#contact-container .contact input[type='submit']:hover {
+  background-color: #45a045;
+}
+.footer-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: gray;
+  color: white;
 }
