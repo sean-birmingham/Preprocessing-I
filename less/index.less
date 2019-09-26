@@ -142,10 +142,10 @@ body {
 }
 
 // Variables
-@container-border: 5px solid red;
-@item-border: 5px solid blue;
 @width: 90%;
 @margin: 30px;
+@green: #4caf50;
+@border: 1px solid darkgray;
 
 // Mix-ins
 .flex {
@@ -157,28 +157,50 @@ body {
   justify-content: center;
 }
 
+.flex-center-margin {
+  .flex-center();
+  margin-top: 30px;
+}
+
+// Main CSS
+
 .nav-container {
-  // border: @container-border;
   background: gray;
   padding: 20px;
   .flex-center();
+  @media (max-width: 500px) {
+    background: none;
+  }
   .nav {
+    @media (max-width: 500px) {
+      .flex-center();
+      flex-direction: column;
+      width: 100%;
+    }
     a {
       color: white;
       margin-right: 10px;
       padding: 5px;
       text-decoration: none;
       &:hover {
-        color: red;
+        color: lighten(@green, 15%);
+      }
+      @media (max-width: 500px) {
+        color: black;
+        border-bottom: @border;
+        text-align: center;
+        padding: 20px;
+        &:hover {
+          background: @green;
+          color: white;
+        }
       }
     }
   }
 }
 
 .main-container {
-  // border: @container-border;
-  margin-top: @margin;
-  .flex-center();
+  .flex-center-margin();
   .main {
     border-radius: 5px;
     width: @width;
@@ -188,7 +210,14 @@ body {
       width: 20%;
     }
     h1 {
-      font-size: 40px;
+      font-size: 4em;
+      margin-bottom: 10px;
+    }
+    hr {
+      border: @border;
+    }
+    p {
+      margin-top: @margin;
     }
     .main-btn {
       border: none;
@@ -200,42 +229,61 @@ body {
       padding: 10px;
       cursor: pointer;
       &:hover {
-        background: #4caf50;
+        background: @green;
       }
     }
   }
 }
 
 .skills-container {
-  // border: @container-border;
-  margin-top: @margin;
-  .flex-center();
+  .flex-center-margin();
   .skills {
-    // border: @item-border;
     width: @width;
     .flex();
+    @media (max-width: 500px) {
+      .flex-center();
+      flex-wrap: wrap;
+      text-align: center;
+    }
     .skills-item-left {
-      // border: @item-border;
-      width: 40%;
+      width: 60%;
+      margin-right: 20px;
       h2 {
         font-size: 30px;
-        margin-bottom: @margin;
+        margin-bottom: 10px;
+      }
+      @media (max-width: 500px) {
+        width: 100%;
+        margin-bottom: 20px;
       }
     }
     .skills-item-right {
-      // border: @item-border;
-      width: 50%;
+      width: 40%;
       h2 {
         font-size: 30px;
+      }
+      ul {
+        border: @border;
+        border-radius: 5px;
+        margin-top: 10px;
+        width: 100%;
+        li {
+          padding: 8px 16px;
+          border-bottom: @border;
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+      @media (max-width: 500px) {
+        width: 100%;
       }
     }
   }
 }
 
 .work-container {
-  // border: @container-border;
-  .flex-center();
-  margin-top: @margin;
+  .flex-center-margin();
   .work {
     width: @width;
     h3 {
@@ -245,7 +293,7 @@ body {
       width: 100%;
       border-collapse: collapse;
       border-spacing: 0;
-      border: 1px solid #ddd;
+      border: @border;
 
       th,
       td {
@@ -261,8 +309,7 @@ body {
 }
 
 #contact-container {
-  .flex-center();
-  margin-top: @margin;
+  .flex-center-margin();
   .contact {
     background: #f2f2f2;
     padding: 20px;
@@ -273,14 +320,14 @@ body {
     textarea {
       width: 100%;
       padding: 12px;
-      border: 1px solid #ccc;
+      border: @border;
       border-radius: 4px;
       margin-top: 6px;
       margin-bottom: 16px;
       resize: vertical;
     }
     input[type='submit'] {
-      background: #4caf50;
+      background: @green;
       color: white;
       padding: 12px 20px;
       border: none;
@@ -288,14 +335,13 @@ body {
       cursor: pointer;
     }
     input[type='submit']:hover {
-      background-color: #45a045;
+      background-color: darken(@green, 5%);
     }
   }
 }
 
 .footer-container {
-  margin-top: @margin;
-  .flex-center();
+  .flex-center-margin();
   padding: 20px;
   background: gray;
   color: white;

@@ -143,11 +143,29 @@ body {
   display: flex;
   justify-content: center;
 }
+.flex-center-margin {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
 .nav-container {
   background: gray;
   padding: 20px;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 500px) {
+  .nav-container {
+    background: none;
+  }
+}
+@media (max-width: 500px) {
+  .nav-container .nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .nav-container .nav a {
   color: white;
@@ -156,12 +174,24 @@ body {
   text-decoration: none;
 }
 .nav-container .nav a:hover {
-  color: red;
+  color: #80c883;
+}
+@media (max-width: 500px) {
+  .nav-container .nav a {
+    color: black;
+    border-bottom: 1px solid darkgray;
+    text-align: center;
+    padding: 20px;
+  }
+  .nav-container .nav a:hover {
+    background: #4caf50;
+    color: white;
+  }
 }
 .main-container {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 .main-container .main {
   border-radius: 5px;
@@ -173,7 +203,14 @@ body {
   width: 20%;
 }
 .main-container .main h1 {
-  font-size: 40px;
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+.main-container .main hr {
+  border: 1px solid darkgray;
+}
+.main-container .main p {
+  margin-top: 30px;
 }
 .main-container .main .main-btn {
   border: none;
@@ -189,26 +226,59 @@ body {
   background: #4caf50;
 }
 .skills-container {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 .skills-container .skills {
   width: 90%;
   display: flex;
 }
+@media (max-width: 500px) {
+  .skills-container .skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
 .skills-container .skills .skills-item-left {
-  width: 40%;
+  width: 60%;
+  margin-right: 20px;
 }
 .skills-container .skills .skills-item-left h2 {
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .skills-container .skills .skills-item-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 .skills-container .skills .skills-item-right {
-  width: 50%;
+  width: 40%;
 }
 .skills-container .skills .skills-item-right h2 {
   font-size: 30px;
+}
+.skills-container .skills .skills-item-right ul {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+.skills-container .skills .skills-item-right ul li {
+  padding: 8px 16px;
+  border-bottom: 1px solid darkgray;
+}
+.skills-container .skills .skills-item-right ul li:last-child {
+  border-bottom: none;
+}
+@media (max-width: 500px) {
+  .skills-container .skills .skills-item-right {
+    width: 100%;
+  }
 }
 .work-container {
   display: flex;
@@ -225,7 +295,7 @@ body {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #ddd;
+  border: 1px solid darkgray;
 }
 .work-container .work table th,
 .work-container .work table td {
@@ -251,7 +321,7 @@ body {
 #contact-container .contact textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid darkgray;
   border-radius: 4px;
   margin-top: 6px;
   margin-bottom: 16px;
@@ -266,12 +336,12 @@ body {
   cursor: pointer;
 }
 #contact-container .contact input[type='submit']:hover {
-  background-color: #45a045;
+  background-color: #449d48;
 }
 .footer-container {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
   padding: 20px;
   background: gray;
   color: white;
