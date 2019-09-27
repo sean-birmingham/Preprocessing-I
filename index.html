@@ -1,19 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>My Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <div class="nav-container">
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#contact-container">Contact</a>
+      </nav>
+    </div>
+    <div class="main-container">
+      <header class="main">
+        <img src="img/sean.jpg" alt="" />
+        <h1>Sean Birmingham - WebPT11</h1>
+        <h2>Technology is my jam!</h2>
+        <hr />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
+          consequuntur tenetur, facilis animi obcaecati veniam nulla adipisci,
+          similique delectus repellendus doloribus tempore ipsum sit beatae
+          explicabo praesentium eveniet reiciendis corporis!
+        </p>
+        <button class="main-btn">Let's Team Up</button>
+      </header>
+    </div>
+    <div class="skills-container">
+      <section class="skills">
+        <div class="skills-item-left">
+          <h2>Listen Up...</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque magni
+            sequi voluptatibus accusamus maxime natus officia perspiciatis sed
+            excepturi illo facilis omnis, eius laboriosam, explicabo obcaecati
+            minima. Quo, eius at? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Eaque magni sequi voluptatibus accusamus maxime
+            natus officia perspiciatis sed excepturi illo facilis omnis, eius
+            laboriosam, explicabo obcaecati minima. Quo, eius at? Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Eaque magni sequi
+            voluptatibus accusamus maxime natus officia perspiciatis sed
+            excepturi illo facilis omnis, eius laboriosam, explicabo obcaecati
+            minima. Quo, eius at?
+          </p>
+        </div>
+        <div class="skills-item-right">
+          <h2>Stuff I'm Good At:</h2>
+          <ul>
+            <li>Proficient with HTML and CSS</li>
+            <li>Some knowledge using Adobe XD</li>
+            <li>Some knowledge using Photoshop</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="work-container">
+      <section class="work">
+        <h3>Work History</h3>
+        <table>
+          <tr>
+            <th>Yrs</th>
+            <th>Company</th>
+            <th>Title</th>
+            <th>Tech Used</th>
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>Food Lion</th>
+            <th>Sales Associate</th>
+            <th>None</th>
+          </tr>
+        </table>
+      </section>
+    </div>
+
+    <div id="contact-container">
+      <section class="contact">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" name="firstname" id="fname" placeholder="Name" />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            name="lastname"
+            id="lname"
+            placeholder="Last name"
+          />
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height:200px"
+          ></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+    </div>
+    <div class="footer-container">
+      <footer>
+        Copyright &copy; Sean Birmingham 2019
+      </footer>
+    </div>
+  </body>
 </html>
